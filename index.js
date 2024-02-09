@@ -12,5 +12,13 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+   const upperCase  = tutorials.map(tutorial => {
+    // ! .split(' ') and .join(' ') is telling the map where to separate and then reconnect the array.
+    return tutorial.split(' ')
+                   .map(word => word[0].toUpperCase() + word.slice(1))
+                   .join(' ');
+
+  });
+  console.log(upperCase)
+return upperCase;
 }
